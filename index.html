@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    
+</head>
+<body>
+    <div class="content">
+        <!-- 开始按钮 -->
+        <span class="record"></span>
+        <div class="btn startBtn">
+            <button></button>
+        </div>
+        <!-- 暂停按钮 -->
+        <div class="btn pauseBtn">
+            <button></button>
+        </div>
+        <!-- 蛇容器 -->
+        <div class="snakeWrap">
+            <!-- <div class="snakeHead"></div>
+            <div class="snakeBody"></div>
+            <div class="food"></div> -->
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+    <script>
+        //存储记录
+        if(!localStorage.getItem('score')){
+            localStorage.setItem('score',0)
+        }
+        var record=document.querySelector('.record')
+        
+        record.innerHTML=`你的最高分数为：${localStorage.getItem('score')}`
+    </script>
+</body>
+</html>
